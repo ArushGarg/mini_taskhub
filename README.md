@@ -1,240 +1,180 @@
-# 🗂️ Mini TaskHub
+🚀 Mini TaskHub
 
+A modern task management mobile application built with Flutter and Supabase, designed with a sleek DayTask-inspired UI.
+The app enables users to securely manage daily tasks with smooth animations, responsive design, and real-time cloud storage.
+
+📱 Demo
+
+🎥 Demo Video: Add your demo link here
+
+📸 Screenshots
 <div align="center">
-
-![Flutter](https://img.shields.io/badge/Flutter-3.x-02569B?style=for-the-badge&logo=flutter&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-3.x-0175C2?style=for-the-badge&logo=dart&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-Auth%20%2B%20DB-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
-![Provider](https://img.shields.io/badge/State-Provider-FF6B6B?style=for-the-badge)
-
-A sleek, production-grade personal task tracking app built with Flutter and Supabase.
-Featuring the **DayTask** UI design, smooth staggered animations, and full CRUD task management.
-
-[Demo Video](#) · [Report Bug](#) · [Request Feature](#)
-
+Splash	Login	Sign Up
+<img src="screenshots/splash.png" width="250">	<img src="screenshots/login.png" width="250">	<img src="screenshots/signup.png" width="250">
+Dashboard	Add Task
+<img src="screenshots/dashboard.png" width="250">	<img src="screenshots/addtask.png" width="250">
 </div>
+✨ Features
+🔐 Authentication
 
----
+Secure email/password login & signup
 
-## 📸 Screenshots
+Powered by Supabase Auth
 
-<div align="center">  | 
+Persistent login sessions
 
-| Splash | Login | Sign Up |
-|--------|-------|---------|
-| <img src="![WhatsApp Image 2026-03-08 at 7 20 24 PM](https://github.com/user-attachments/assets/a8a0a173-8963-4ae0-a07b-979cf2085d9e)">
-| <img src="![WhatsApp Image 2026-03-08 at 7 20 24 PM (1)](https://github.com/user-attachments/assets/27014e05-85b7-48e5-a200-6319cac0b2b6)">
-| <img src="![WhatsApp Image 2026-03-08 at 7 20 24 PM (2)](https://github.com/user-attachments/assets/14f858cf-0788-4574-8845-1b2039d04287)">
+✅ Task Management
 
-| Dashboard | Add Task |
-|-----------|----------|
-| <img src="![WhatsApp Image 2026-03-08 at 7 20 24 PM (3)](https://github.com/user-attachments/assets/8a2481dd-feed-4160-b84e-04b316de7a5c)">
-| <img src="![WhatsApp Image 2026-03-08 at 7 20 25 PM](https://github.com/user-attachments/assets/f16fc2ee-a53d-4f7f-8c40-bd8b2330290e)"> 
+Create new tasks
 
-</div>
+Edit existing tasks
 
----
+Mark tasks as completed
 
-## ✨ Features
+Delete tasks with swipe gesture
 
-- 🔐 **Authentication** — Email/password login & signup via Supabase Auth
-- ✅ **Task Management** — Create, edit, delete, and complete tasks
-- 💾 **Persistent Storage** — All tasks stored in Supabase PostgreSQL
-- 🎨 **DayTask UI** — Dark navy theme `#1C2331` with golden yellow `#F5C518` accents
-- 🎬 **Smooth Animations** — Staggered entrance, fade/slide transitions, press-to-scale buttons
-- 📊 **Dashboard** — Completed task cards + ongoing task list with progress
-- 👆 **Swipe to Delete** — Intuitive gesture-based task deletion
-- ⚡ **Shimmer Loading** — Skeleton loader while fetching tasks
-- 🌙 **Dark Theme** — Consistent dark design matching DayTask Figma
-- 📱 **Responsive Design** — Works on all screen sizes
-- 🧭 **Bottom Navigation** — Home, Chat, Add, Calendar, Alerts tabs
+📊 Dashboard
 
----
+View completed tasks
 
-## 🛠️ Tech Stack
+Track ongoing tasks
 
-| Layer | Technology |
-|-------|-----------|
-| Framework | Flutter 3.x + Dart |
-| Backend / Auth | Supabase (PostgreSQL + Auth) |
-| State Management | Provider |
-| Fonts | Google Fonts (Poppins) |
-| Animations | Flutter built-in + staggered intervals |
-| UI Components | flutter_slidable, shimmer |
+Organized task list
 
----
+🎨 UI/UX
 
-## 📂 Folder Structure
+DayTask inspired dark theme
 
-```
-lib/
-├── main.dart                  # App entry point, Supabase init
-├── app/
-│   ├── theme.dart             # Global colors, typography, component themes
-│   └── router.dart            # Centralized named route navigation
-├── auth/
-│   ├── splash_screen.dart     # Splash with DayTask branding + animations
-│   ├── login_screen.dart      # DayTask login with staggered animations
-│   ├── signup_screen.dart     # Registration screen
-│   └── auth_service.dart      # Raw Supabase auth calls
-├── dashboard/
-│   ├── dashboard_screen.dart  # Home screen with bottom nav + task sections
-│   ├── task_tile.dart         # Reusable swipeable task widget
-│   ├── task_model.dart        # Task data model with fromJson/toJson/copyWith
-│   └── add_task_sheet.dart    # Bottom sheet for add/edit task with date picker
-├── providers/
-│   ├── auth_provider.dart     # Auth state management
-│   └── task_provider.dart     # Task CRUD state management
-├── services/
-│   └── supabase_service.dart  # All Supabase DB calls
-└── utils/
-    └── validators.dart        # Form validators with String extensions
-```
+Smooth staggered animations
 
----
+Press-scale buttons
 
-## 🚀 Getting Started
+Shimmer loading skeletons
 
-### Prerequisites
-- Flutter SDK 3.x
-- Dart 3.x
-- A free [Supabase](https://supabase.com) account
+📱 Responsive
 
-### 1. Clone the repo
-```bash
+Works across different screen sizes
+
+Clean mobile-first layout
+
+🛠️ Tech Stack
+Category	Technology
+Framework	Flutter
+Language	Dart
+Backend	Supabase
+Database	PostgreSQL
+State Management	Provider
+UI Libraries	flutter_slidable, shimmer
+Fonts	Google Fonts (Poppins)
+🏗️ Architecture
+
+The project follows a clean and modular architecture.
+
+lib
+│
+├── app
+│   ├── theme.dart
+│   └── router.dart
+│
+├── auth
+│   ├── splash_screen.dart
+│   ├── login_screen.dart
+│   ├── signup_screen.dart
+│   └── auth_service.dart
+│
+├── dashboard
+│   ├── dashboard_screen.dart
+│   ├── task_tile.dart
+│   ├── task_model.dart
+│   └── add_task_sheet.dart
+│
+├── providers
+│   ├── auth_provider.dart
+│   └── task_provider.dart
+│
+├── services
+│   └── supabase_service.dart
+│
+└── utils
+    └── validators.dart
+⚙️ Installation
+1️⃣ Clone the Repository
 git clone https://github.com/ArushGarg/mini_taskhub.git
 cd mini_taskhub
-```
-
-### 2. Install dependencies
-```bash
+2️⃣ Install Dependencies
 flutter pub get
-```
+3️⃣ Setup Supabase
 
-### 3. Supabase Setup
+Create a new project on Supabase and run:
 
-1. Go to [supabase.com](https://supabase.com) and create a new project
-2. Navigate to **SQL Editor** and run the following:
-
-```sql
 create table tasks (
   id uuid default gen_random_uuid() primary key,
   user_id uuid references auth.users(id) on delete cascade not null,
   title text not null,
   description text,
   is_completed boolean default false,
-  created_at timestamp with time zone default timezone('utc'::text, now()) not null
+  created_at timestamp with time zone default timezone('utc', now()) not null
 );
+
+Enable Row Level Security:
 
 alter table tasks enable row level security;
 
+Add policy:
+
 create policy "Users can only access their own tasks"
-  on tasks for all
-  using (auth.uid() = user_id);
-```
+on tasks for all
+using (auth.uid() = user_id);
+4️⃣ Add Supabase Keys
 
-3. Go to **Settings → API** and copy your:
-   - Project URL
-   - Anon/Public Key
+Update main.dart:
 
-4. Paste them into `lib/main.dart`:
-```dart
 await Supabase.initialize(
   url: 'YOUR_SUPABASE_URL',
   anonKey: 'YOUR_SUPABASE_ANON_KEY',
 );
-```
-
-### 4. Add Screenshots to Repo
-```bash
-mkdir screenshots
-# Copy your screenshots into the screenshots/ folder
-# then name them: splash.jpeg, login.jpeg, signup.jpeg, dashboard.jpeg, add_task.jpeg
-```
-
-### 5. Run the app
-```bash
+5️⃣ Run the App
 flutter run
-```
+📦 Dependencies
+supabase_flutter: ^2.3.0
+provider: ^6.1.1
+google_fonts: ^6.1.0
+flutter_slidable: ^3.0.1
+shimmer: ^3.0.0
+uuid: ^4.3.3
+🧪 Testing
 
----
+Run tests using:
 
-## 🔥 Hot Reload vs Hot Restart
-
-| | Hot Reload ⚡ | Hot Restart 🔄 |
-|--|--------------|----------------|
-| **Speed** | ~1 second | ~3–5 seconds |
-| **App State** | ✅ Preserved | ❌ Reset |
-| **`initState()` runs** | ❌ No | ✅ Yes |
-| **Use when** | UI tweaks, style changes | Logic changes, new providers |
-| **Shortcut** | `r` in terminal | `R` in terminal |
-
-> **Hot Reload** injects updated Dart code into the running VM without losing the current state — ideal for UI iteration.
-> **Hot Restart** fully restarts the app from `main()`, reinitializing all state — needed when changing app-level logic.
-
----
-
-## 🧪 Running Tests
-
-```bash
 flutter test
-```
+📚 Key Concepts Demonstrated
 
-Includes unit test for `Task` model serialization (`fromJson`, `toJson`, `copyWith`).
+Object Oriented Programming
 
----
+State Management using Provider
 
-## 🏗️ Architecture Decisions
+REST API interaction
 
-- **Provider** chosen for simplicity and Flutter-native feel — no boilerplate overhead
-- **AuthService** layer handles raw Supabase calls, fully decoupled from UI
-- **SupabaseService** handles all DB operations — easy to swap backend if needed
-- **Row Level Security** on Supabase ensures users only ever access their own data
-- **Named routing** via `AppRouter` keeps navigation centralized and maintainable
-- **`copyWith` pattern** on `Task` model follows immutable data best practices
+Async/Await programming
 
----
+Clean architecture
 
-## 🎯 Key Concepts Demonstrated
+Reusable Flutter widgets
 
-- ✅ OOP — Model classes, service classes, providers
-- ✅ Async/Await — All Supabase calls properly awaited
-- ✅ Extensions — `String` validators (`isValidEmail`, `isValidPassword`)
-- ✅ Custom Widgets — `TaskTile`, `_DayTaskField`, `_YellowButton`
-- ✅ REST + JSON — Via Supabase client SDK
-- ✅ Responsive Design — `MediaQuery` aware layouts
-- ✅ Animations — Staggered intervals, floating, press-scale, fade transitions
-- ✅ Clean Architecture — Service → Provider → UI separation
+Animation in Flutter
 
----
+Form validation
 
-## 📦 Dependencies
+👨‍💻 Author
 
-```yaml
-supabase_flutter: ^2.3.0   # Auth + Database
-provider: ^6.1.1            # State management
-google_fonts: ^6.1.0        # Poppins typography
-flutter_slidable: ^3.0.1    # Swipe-to-delete gesture
-shimmer: ^3.0.0             # Loading skeleton effect
-uuid: ^4.3.3                # UUID generation
-```
+Arush Garg
 
----
+GitHub
+https://github.com/ArushGarg
 
-## 🙋‍♂️ Author
+LinkedIn
+https://linkedin.com/in/arushgarg
 
-**Arush Garg**
-- GitHub: [@ArushGarg](https://github.com/ArushGarg)
-- LinkedIn: [Arush Garg](https://linkedin.com/in/arushgarg/)
+📄 License
 
----
-
-## 📄 License
-
-This project was built as an internship assessment for **Techstax**.
-
----
-
-<div align="center">
-  Made with ❤️ and Flutter
-</div>
+This project was developed as part of an internship assessment for Techstax.
