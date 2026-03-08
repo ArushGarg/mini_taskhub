@@ -10,7 +10,7 @@
 A sleek, production-grade personal task tracking app built with Flutter and Supabase.
 Featuring the **DayTask** UI design, smooth staggered animations, and full CRUD task management.
 
-[▶️ Demo Video (Google Drive)](https://drive.google.com/file/d/1HJL6yEdDFfspCi9P-WrHHNk0bLxdEsYn/view?usp=drivesdk/view) · [Report Bug](#) · [Request Feature](#)
+[▶️ Demo Video (Google Drive)](https://drive.google.com/file/d/1HJL6yEdDFfspCi9P-WrHHNk0bLxdEsYn/view?usp=drivesdk/view)
 
 </div>
 
