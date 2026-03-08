@@ -5,6 +5,7 @@ import 'app/theme.dart';
 import 'app/router.dart';
 import 'providers/auth_provider.dart';
 import 'providers/task_provider.dart';
+import 'auth/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,12 +29,11 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => TaskProvider()),
       ],
       child: MaterialApp(
-        title: 'Mini TaskHub',
+        title: 'DayTask',
         debugShowCheckedModeBanner: false,
-        theme: AppTheme.lightTheme,
-        darkTheme: AppTheme.darkTheme,
-        themeMode: ThemeMode.system,
-        initialRoute: AppRouter.initialRoute,
+        theme: AppTheme.darkTheme,
+        themeMode: ThemeMode.dark,
+        home: const SplashScreen(),
         onGenerateRoute: AppRouter.generateRoute,
       ),
     );
