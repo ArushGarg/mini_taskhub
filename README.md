@@ -10,9 +10,14 @@ The app enables users to securely manage daily tasks with smooth animations, res
 📸 Screenshots
 <div align="center">
 Splash	Login	Sign Up
-<img src="screenshots/splash.png" width="250">	<img src="screenshots/login.png" width="250">	<img src="screenshots/signup.png" width="250">
+<img src="![splash png](https://github.com/user-attachments/assets/0f05b0ae-663d-4da2-92c6-db3f2ed68ebe)
+" width="250">	<img src="![login png](https://github.com/user-attachments/assets/8858e655-a2b8-4d73-832f-06a972ba9bbb)
+" width="250">	<img src="![signup png](https://github.com/user-attachments/assets/c1fbcc96-7a93-493f-82f2-ccc2b1bf9149)
+" width="250">
 Dashboard	Add Task
-<img src="screenshots/dashboard.png" width="250">	<img src="screenshots/addtask.png" width="250">
+<img src="![dashboard png](https://github.com/user-attachments/assets/449af001-684c-4f99-8d19-d9cf8e87b599)
+" width="250">	<img src="![addtask png](https://github.com/user-attachments/assets/3007c884-82b7-4e7d-a08e-6835f1c6b6cc)
+" width="250">
 </div>
 ✨ Features
 🔐 Authentication
