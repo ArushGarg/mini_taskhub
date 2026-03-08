@@ -18,11 +18,12 @@ Featuring the **DayTask** UI design, smooth staggered animations, and full CRUD 
 
 ## 📸 Screenshots
 
-<div align="center">
+<div align="center">  | 
 
 | Splash | Login | Sign Up |
 |--------|-------|---------|
-| <img src="screenshots/splash.jpeg" width="200"/> | <img src="screenshots/login.jpeg" width="200"/> | <img src="screenshots/signup.jpeg" width="200"/> |
+| <img src="![WhatsApp Image 2026-03-08 at 7 20 24 PM](https://github.com/user-attachments/assets/a8a0a173-8963-4ae0-a07b-979cf2085d9e)
+" width="200"/> | <img src="screenshots/login.jpeg" width="200"/> | <img src="screenshots/signup.jpeg" width="200"/> |
 
 | Dashboard | Add Task |
 |-----------|----------|
