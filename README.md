@@ -8,7 +8,7 @@
 ![Provider](https://img.shields.io/badge/State-Provider-FF6B6B?style=for-the-badge)
 
 A sleek, production-grade personal task tracking app built with Flutter and Supabase.
-Features glassmorphism UI, smooth staggered animations, and full CRUD task management.
+Featuring the **DayTask** UI design, smooth staggered animations, and full CRUD task management.
 
 [Demo Video](#) · [Report Bug](#) · [Request Feature](#)
 
@@ -18,27 +18,33 @@ Features glassmorphism UI, smooth staggered animations, and full CRUD task manag
 
 ## 📸 Screenshots
 
-> Login Screen · Dashboard · Add Task Sheet
+<div align="center">
 
-<!-- Add your screenshots here -->
-| Login | Dashboard | Add Task |
-|-------|-----------|----------|
-| ![login]() | ![dashboard]() | ![addtask]() |
+| Splash | Login | Sign Up |
+|--------|-------|---------|
+| <img src="screenshots/splash.jpeg" width="200"/> | <img src="screenshots/login.jpeg" width="200"/> | <img src="screenshots/signup.jpeg" width="200"/> |
+
+| Dashboard | Add Task |
+|-----------|----------|
+| <img src="screenshots/dashboard.jpeg" width="200"/> | <img src="screenshots/add_task.jpeg" width="200"/> |
+
+</div>
 
 ---
 
 ## ✨ Features
 
-- 🔐 **Authentication** — Email/password login, signup via Supabase Auth
+- 🔐 **Authentication** — Email/password login & signup via Supabase Auth
 - ✅ **Task Management** — Create, edit, delete, and complete tasks
 - 💾 **Persistent Storage** — All tasks stored in Supabase PostgreSQL
-- 🎨 **Glassmorphism UI** — Dark theme with glowing orbs and animated background
-- 🎬 **Smooth Animations** — Staggered entrance, fade/slide transitions, press-to-scale button
-- 📊 **Stats Dashboard** — Live count of total, pending, and completed tasks
+- 🎨 **DayTask UI** — Dark navy theme `#1C2331` with golden yellow `#F5C518` accents
+- 🎬 **Smooth Animations** — Staggered entrance, fade/slide transitions, press-to-scale buttons
+- 📊 **Dashboard** — Completed task cards + ongoing task list with progress
 - 👆 **Swipe to Delete** — Intuitive gesture-based task deletion
 - ⚡ **Shimmer Loading** — Skeleton loader while fetching tasks
-- 🌙 **Dark / Light Theme** — System-aware theme switching
+- 🌙 **Dark Theme** — Consistent dark design matching DayTask Figma
 - 📱 **Responsive Design** — Works on all screen sizes
+- 🧭 **Bottom Navigation** — Home, Chat, Add, Calendar, Alerts tabs
 
 ---
 
@@ -49,33 +55,35 @@ Features glassmorphism UI, smooth staggered animations, and full CRUD task manag
 | Framework | Flutter 3.x + Dart |
 | Backend / Auth | Supabase (PostgreSQL + Auth) |
 | State Management | Provider |
-| Fonts | Google Fonts (Syne + DM Sans) |
-| Animations | Flutter built-in + CustomPainter |
+| Fonts | Google Fonts (Poppins) |
+| Animations | Flutter built-in + staggered intervals |
 | UI Components | flutter_slidable, shimmer |
 
 ---
 
 ## 📂 Folder Structure
+
 ```
 lib/
-├── main.dart                  # App entry, Supabase init
+├── main.dart                  # App entry point, Supabase init
 ├── app/
 │   ├── theme.dart             # Global colors, typography, component themes
 │   └── router.dart            # Centralized named route navigation
 ├── auth/
-│   ├── login_screen.dart      # Glassmorphism login with animations
+│   ├── splash_screen.dart     # Splash with DayTask branding + animations
+│   ├── login_screen.dart      # DayTask login with staggered animations
 │   ├── signup_screen.dart     # Registration screen
-│   └── auth_service.dart      # Auth helper methods
+│   └── auth_service.dart      # Raw Supabase auth calls
 ├── dashboard/
-│   ├── dashboard_screen.dart  # Main task list with stats
+│   ├── dashboard_screen.dart  # Home screen with bottom nav + task sections
 │   ├── task_tile.dart         # Reusable swipeable task widget
-│   ├── task_model.dart        # Task data model with fromJson/toJson
-│   └── add_task_sheet.dart    # Bottom sheet for add/edit task
+│   ├── task_model.dart        # Task data model with fromJson/toJson/copyWith
+│   └── add_task_sheet.dart    # Bottom sheet for add/edit task with date picker
 ├── providers/
 │   ├── auth_provider.dart     # Auth state management
 │   └── task_provider.dart     # Task CRUD state management
 ├── services/
-│   └── supabase_service.dart  # All Supabase DB & auth calls
+│   └── supabase_service.dart  # All Supabase DB calls
 └── utils/
     └── validators.dart        # Form validators with String extensions
 ```
@@ -91,7 +99,7 @@ lib/
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/yourusername/mini_taskhub.git
+git clone https://github.com/ArushGarg/mini_taskhub.git
 cd mini_taskhub
 ```
 
@@ -104,6 +112,7 @@ flutter pub get
 
 1. Go to [supabase.com](https://supabase.com) and create a new project
 2. Navigate to **SQL Editor** and run the following:
+
 ```sql
 create table tasks (
   id uuid default gen_random_uuid() primary key,
@@ -133,7 +142,14 @@ await Supabase.initialize(
 );
 ```
 
-### 4. Run the app
+### 4. Add Screenshots to Repo
+```bash
+mkdir screenshots
+# Copy your screenshots into the screenshots/ folder
+# then name them: splash.jpeg, login.jpeg, signup.jpeg, dashboard.jpeg, add_task.jpeg
+```
+
+### 5. Run the app
 ```bash
 flutter run
 ```
@@ -156,6 +172,7 @@ flutter run
 ---
 
 ## 🧪 Running Tests
+
 ```bash
 flutter test
 ```
@@ -167,7 +184,8 @@ Includes unit test for `Task` model serialization (`fromJson`, `toJson`, `copyWi
 ## 🏗️ Architecture Decisions
 
 - **Provider** chosen for simplicity and Flutter-native feel — no boilerplate overhead
-- **Service layer** (`SupabaseService`) fully decoupled from UI — easy to swap backend
+- **AuthService** layer handles raw Supabase calls, fully decoupled from UI
+- **SupabaseService** handles all DB operations — easy to swap backend if needed
 - **Row Level Security** on Supabase ensures users only ever access their own data
 - **Named routing** via `AppRouter` keeps navigation centralized and maintainable
 - **`copyWith` pattern** on `Task` model follows immutable data best practices
@@ -179,19 +197,20 @@ Includes unit test for `Task` model serialization (`fromJson`, `toJson`, `copyWi
 - ✅ OOP — Model classes, service classes, providers
 - ✅ Async/Await — All Supabase calls properly awaited
 - ✅ Extensions — `String` validators (`isValidEmail`, `isValidPassword`)
-- ✅ Custom Widgets — `TaskTile`, `_GlassTextField`, `_GradientButton`
-- ✅ CustomPainter — Animated dot-grid background
+- ✅ Custom Widgets — `TaskTile`, `_DayTaskField`, `_YellowButton`
 - ✅ REST + JSON — Via Supabase client SDK
 - ✅ Responsive Design — `MediaQuery` aware layouts
-- ✅ Animations — Staggered, floating, press-scale, fade transitions
+- ✅ Animations — Staggered intervals, floating, press-scale, fade transitions
+- ✅ Clean Architecture — Service → Provider → UI separation
 
 ---
 
 ## 📦 Dependencies
+
 ```yaml
 supabase_flutter: ^2.3.0   # Auth + Database
 provider: ^6.1.1            # State management
-google_fonts: ^6.1.0        # Syne + DM Sans typography
+google_fonts: ^6.1.0        # Poppins typography
 flutter_slidable: ^3.0.1    # Swipe-to-delete gesture
 shimmer: ^3.0.0             # Loading skeleton effect
 uuid: ^4.3.3                # UUID generation
@@ -201,8 +220,8 @@ uuid: ^4.3.3                # UUID generation
 
 ## 🙋‍♂️ Author
 
-**Your Name**
-- GitHub: [ArushGarg](https://github.com/ArushGarg)
+**Arush Garg**
+- GitHub: [@ArushGarg](https://github.com/ArushGarg)
 - LinkedIn: [Arush Garg](https://linkedin.com/in/arushgarg/)
 
 ---
@@ -216,15 +235,3 @@ This project was built as an internship assessment for **Techstax**.
 <div align="center">
   Made with ❤️ and Flutter
 </div>
-```
-
----
-
-### Three things to do before uploading:
-
-1. **Add a `.gitignore`** — make sure it includes:
-```
-.env
-*.g.dart
-.dart_tool/
-build/
