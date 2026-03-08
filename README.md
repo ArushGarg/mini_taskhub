@@ -23,11 +23,15 @@ Featuring the **DayTask** UI design, smooth staggered animations, and full CRUD 
 | Splash | Login | Sign Up |
 |--------|-------|---------|
 | <img src="![WhatsApp Image 2026-03-08 at 7 20 24 PM](https://github.com/user-attachments/assets/a8a0a173-8963-4ae0-a07b-979cf2085d9e)
-" width="200"/> | <img src="screenshots/login.jpeg" width="200"/> | <img src="screenshots/signup.jpeg" width="200"/> |
+" width="200"/> | <img src="![WhatsApp Image 2026-03-08 at 7 20 24 PM (1)](https://github.com/user-attachments/assets/27014e05-85b7-48e5-a200-6319cac0b2b6)
+" width="200"/> | <img src="![WhatsApp Image 2026-03-08 at 7 20 24 PM (2)](https://github.com/user-attachments/assets/14f858cf-0788-4574-8845-1b2039d04287)
+" width="200"/> |
 
 | Dashboard | Add Task |
 |-----------|----------|
-| <img src="screenshots/dashboard.jpeg" width="200"/> | <img src="screenshots/add_task.jpeg" width="200"/> |
+| <img src="![WhatsApp Image 2026-03-08 at 7 20 24 PM (3)](https://github.com/user-attachments/assets/8a2481dd-feed-4160-b84e-04b316de7a5c)
+" width="200"/> | <img src="![WhatsApp Image 2026-03-08 at 7 20 25 PM](https://github.com/user-attachments/assets/f16fc2ee-a53d-4f7f-8c40-bd8b2330290e)
+" width="200"/> |
 
 </div>
 
