@@ -219,12 +219,6 @@ uuid: ^4.3.3                # UUID generation
 
 ---
 
-## 📄 License
-
-This project was built as an internship assessment for **Techstax**.
-
----
-
 <div align="center">
   Made with ❤️ and Flutter
 </div>
